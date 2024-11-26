@@ -1,0 +1,11 @@
+[
+	{
+		"test": "narita\nNRT\n"
+	},
+	{
+		"test": "losangeles\nLAX\n"
+	},
+	{
+		"test": "snuke\nRNG\n"
+	}
+]

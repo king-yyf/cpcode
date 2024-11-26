@@ -1,0 +1,8 @@
+[
+	{
+		"test": "4\napple\npear\nbanana\npear\n"
+	},
+	{
+		"test": "8\npen\nbook\neraser\ndesk\ndesk\neraser\nbook\npen\n"
+	}
+]

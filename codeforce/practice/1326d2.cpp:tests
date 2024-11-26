@@ -1,0 +1,9 @@
+[
+	{
+		"correct_answers":
+		[
+			"a\nabcdfdcba\nxyzyx\ns\nabba"
+		],
+		"test": "5\na\nabcdfdcecba\nabbaxyzyx\ncodeforces\nacbba\n"
+	}
+]

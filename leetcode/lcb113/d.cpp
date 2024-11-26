@@ -1,0 +1,163 @@
+#ifdef sigma-yyf
+#include "/Users/yangyf/Desktop/cpcode/leetcode/lc_help.hpp"
+#endif
+using namespace std;
+
+using ll = long long;
+using ar2 = array<int, 2>;
+using ar3 = array<int, 3>;
+using ar4 = array<int, 4>;
+#define all(c) (c).begin(), (c).end()
+#define rall(x) (x).rbegin(), (x).rend() 
+#define sz(x) (int)(x).size()
+#define f0(e) for(int i = 0; i < (e); ++i)
+#define f1(e) for(int i = 1; i <= (e); ++i)
+#define f2(i,e) for(int i = 0; i < (e); ++i)
+#define f3(i,a,b) for (int i=(a);i<(b);i++)
+#define r3(i,b,a) for (int i=(b)-1;i>=(a);i--)
+#define Sm(a) accumulate((a).begin(), (a).end() , 0ll)
+#define Mn(a) (*min_element((a).begin(), (a).end()))
+#define Mx(a) (*max_element((a).begin(), (a).end()))
+#define rev(a) reverse((a).begin(), (a).end())
+#define each(x,a) for(auto& x : a)
+#define mst(a,x) memset(a, x, sizeof(a))
+mt19937 mrand(random_device{}()); 
+int rng(int x) { return mrand() % x;}
+int pct(long long x) {return __builtin_popcountll(x);} 
+int lg(int x) {return x == 0 ? -1 : 31 - __builtin_clz(x);}
+int clg(int x) {return x <= 1 ? 0 : 32 - __builtin_clz(x - 1);}
+template<class t,class u> bool cmx(t &a, const u &b){return a < b ? a = b, 1 : 0;}
+template<class t,class u> bool cmn(t &a, const u &b){return b < a ? a = b, 1 : 0;}
+template <class T> int lb(const vector<T> &v, const T &x) { return distance(begin(v), lower_bound(begin(v), end(v), x));}
+template <class T> int rb(const vector<T> &v, const T &x) { return distance(begin(v), upper_bound(begin(v), end(v), x));}
+template<class T,class A> void psum(vector<T>& s, const vector<A>&a){
+    int n=a.size(); s.assign(n + 1, 0); 
+    for(int i = 0; i < n; ++i) s[i + 1] = s[i] + a[i];  
+};
+template<typename T, typename F> T b_search(T l, T r, bool fst, F &&f) {
+    T c = fst ? r : l;
+    while(l<=r){T md=(l+r)/2;if(f(md)){c=md;fst?(r=md-1):(l=md+1);} else fst?(l=md+1):(r=md-1);}
+    return c;
+}
+template<class A> void wt(A x) { cout << x;}
+template<class H, class... T> void wt(const H& h, const T&... t) { wt(h); wt(t...);}
+template<class A> void wt(vector<A>& x) {for(int i=0,n=x.size();i<n;++i) cout<<x[i]<<" \n"[i==n-1];}
+template<class A> void dbg(A x) { cout << x << " ";}
+template<class H, class... T> void dbg(const H& h, const T&... t) { dbg(h); dbg(t...);}
+template<class A> void dbg(vector<vector<A>>& x) {each(c,x)wt(c);}
+template<class A, class T> void dbg(map<A,T>& x) {for(auto&[k,v]:x){cout<<"("<<k<<": "<<v<<"), ";}cout<<"\n";}
+bool is_vo(char c){return c=='a' || c=='e' || c=='i' || c=='o' || c=='u';}
+int s2t(string &s){return s[0]*600 + s[1]*60 + s[3]*10 + s[4] - 32208;} //s: "HH:MM" 
+struct fast_ios { 
+    fast_ios(){ cin.tie(nullptr), ios::sync_with_stdio(false), cout << fixed << setprecision(10);};
+} fast_ios_;
+
+const char nl = '\n';
+const int N = 2e5 + 5;
+int n, m, k;
+
+template <class T,   // dp值的类型，如ll，int等。
+        T(*op)(T, T), // 合并运算，需要满足交换律 op(dp[i], dp[j])
+        T(*e)(),    // op 运算单位元，op(x, e()) = x
+        T(*G)(T, int, int), // 根节点累积信息 G(dp[child], child, fa)
+        class E,  // 边上 weight 的类型
+        T(*F)(T, int, int, E)> // 子节点信息转移为父节点 F(dp[child], child, fa, weight(child, fa))
+struct ReRooting : public vector<vector<pair<int, E>>> {
+    using base_type = vector<vector<pair<int, E>>>;
+    public:
+        static constexpr int NIL = -1;
+        using base_type::base_type;
+
+        void add_edge(int u, int v, const E& w) {
+            (*this)[u].emplace_back(v, w);
+            (*this)[v].emplace_back(u, w);
+        }
+
+        const vector<T>& get(int root = 0) {
+            const int n = this->size();
+            dp.resize(n), to_par.resize(n);
+            dfs_subtree(root, NIL);
+            dfs(root, NIL, e());
+            return dp;
+        }
+
+    private:
+        vector<T> dp, to_par;
+
+        void dfs_subtree(int u, int p) {
+            dp[u] = e();
+            for (auto [v, w] : (*this)[u]) {
+                if (v == p) continue;
+                dfs_subtree(v, u);
+                dp[u] = op(dp[u], to_par[v] = F(G(dp[v], v, u), v, u, w));
+            }
+        }
+        void dfs(int u, int p, T from_p) {
+            dp[u] = G(dp[u], u, NIL);
+            const int sz = (*this)[u].size();
+            vector<T> cum_l { e() };
+            cum_l.reserve(sz + 1);
+            for (const auto& [v, _] : (*this)[u]) cum_l.push_back(op(cum_l.back(), v == p ? from_p : to_par[v]));
+            T cum_r = e();
+            for (int i = sz - 1; i >= 0; --i) {
+                const auto& [v, w] = (*this)[u][i];
+                if (v == p) {
+                    cum_r = op(from_p, cum_r);
+                } else {
+                    T from_u = F(G(op(cum_l[i], cum_r), u, v), u, v, w);
+                    dp[v] = op(dp[v], from_u);
+                    dfs(v, u, from_u);
+                    cum_r = op(to_par[v], cum_r);
+                }
+            }
+        }
+};
+
+// dp[v]=g( op(f(dp[c1], v1),  f(dp[c2], v2) , ... f(dp[c2], v2)), v)
+using S = int;
+using E = nullptr_t;
+set<pair<int,int>> s;
+
+S op(S x, S y) {
+    return x + y;
+}
+S e() {
+    return 0;
+}
+S G(S x, int u, int fa) {
+    return x + s.count({u, fa});
+}
+S F(S x, int u, int fa, E w) {
+    return x - s.count({u, fa});
+}
+unordered_set<int> 
+class Solution {
+public:
+    vector<int> minEdgeReversals(int n, vector<vector<int>>& es) {
+    	s.clear();
+        ReRooting<S, op, e, G, E, F> g(n);
+        for (auto &e : es) {
+        	int u = e[0], v = e[1];
+        	g.add_edge(u, v, nullptr);
+        	s.emplace(u, v);
+        }
+        return g.get();
+    }
+};
+
+#ifdef sigma-yyf
+int main(){
+    vector<int> v,a,b;
+    string s,t;
+    vector<string> sv;
+    vector<vector<int>> vv;
+    // ListNode* head = nullptr, *l1,*l2;
+    // TreeNode* root = nullptr,*p,*q;
+    // Solution so;
+    // rd(a,k);
+    // auto ans = so.;
+    // wt(ans);
+    cout<<'\n';
+    return 0;
+}
+#endif

@@ -1,0 +1,11 @@
+[
+	{
+		"test": "a?c\nb?\n"
+	},
+	{
+		"test": "atcoder\n?????\n"
+	},
+	{
+		"test": "beginner\ncontest\n"
+	}
+]

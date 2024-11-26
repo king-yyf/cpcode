@@ -1,0 +1,11 @@
+[
+	{
+		"test": "3\nl0w\n1ow\n"
+	},
+	{
+		"test": "3\nabc\narc\n"
+	},
+	{
+		"test": "4\nnok0\nn0ko\n"
+	}
+]

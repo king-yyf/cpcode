@@ -1,0 +1,11 @@
+Minimum Changes to Make K Semi-palindromes Given a string s and an integer k, partition s into k substrings such that the sum of the number of letter changes required to turn each substring into a semi-palindrome is minimized.
+
+output the minimum number of letter changes required.
+
+A string with a length of len is considered a semi-palindrome if there exists a positive integer d such that 1 <= d < len and len % d == 0, and if we take indices that have the same modulo by d, they form a palindrome. 
+
+minimum cost to get a
+
+
+partition s into k substrings semi-palindromes minimal number of characters that you need to change to divide the string.
+

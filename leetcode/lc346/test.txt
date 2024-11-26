@@ -1,0 +1,31 @@
+Some edges have a weight of -1 (wi = -1), while others have a positive weight modify edges with a weight of -1  the shortest distance between the nodes source and destination becomes equal to an integer target
+
+
+n 个节点的 无向带权连通 图，部分边的边权为 -1，将所有边权为 -1 的边都修改为某个 正整数 ，使得从节点 source 到节点 destination 的 最短距离 为 target 。如果有 多种 修改方案，返回任意一种方案。
+
+
+given an undirected weighted connected graph with n nodes, modify edges with weight -1 by a positive values so that the shortest distance between the nodes source and destination becomes is target
+
+
+Some edges have a weight of -1 (wi = -1), while others have a positive weight (wi > 0). task is to modify all edges with a weight of -1 by assigning them positive values so that the shortest distance between the nodes source and destination becomes equal to target. If there are multiple modifications that make the shortest distance between source and destination equal to target, any of them will be considered correct.
+
+Return an array containing all edges (even unmodified ones) in any order if it is possible to make the shortest distance from source to destination equal to target, or an empty array if it's impossible.
+
+Note: You are not allowed to modify the weights of edges with initial positive weights.
+
+
+给定无向连通图，修改图中为-1的边权，使s到t的最短距离为Target,如果有 多种 修改方案,返回任意一种方案。
+
+
+given an undirected weighted connected graph containing n nodes Modify Edge Weights so that the shortest distance between node source and destination is target
+
+
+Edge Weight Assignment so that the shortest distance between node source and destination is target
+
+
+set all edges with weight -1 to positive integer, so that the shortest distance between nodes s and t equal to an target. If there are multiple modifications that make the shortest distance between source and destination equal to target, output any of them.
+
+
+
+
+assignment graph edge weights so that the shortest distance between nodes s and t equal to an target

@@ -1,0 +1,11 @@
+[
+	{
+		"test": "8\nABABCABC\n"
+	},
+	{
+		"test": "3\nACB\n"
+	},
+	{
+		"test": "20\nBBAAABBACAACABCBABAB\n"
+	}
+]

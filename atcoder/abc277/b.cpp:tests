@@ -1,0 +1,11 @@
+[
+	{
+		"test": "4\nH3\nDA\nD3\nSK\n"
+	},
+	{
+		"test": "5\nH3\nDA\nCK\nH3\nS7\n"
+	},
+	{
+		"test": "5\n00\nAA\nXX\nYY\nZZ\n"
+	}
+]

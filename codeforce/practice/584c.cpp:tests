@@ -1,0 +1,8 @@
+[
+	{
+		"test": "3 2\nabc\nxyc\n"
+	},
+	{
+		"test": "1 0\nc\nb\n"
+	}
+]

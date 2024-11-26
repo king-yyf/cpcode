@@ -1,0 +1,14 @@
+[
+	{
+		"test": "10\no-oooo---o\n"
+	},
+	{
+		"test": "1\n-\n"
+	},
+	{
+		"test": "30\n-o-o-oooo-oo-o-ooooooo--oooo-o\n"
+	},
+	{
+		"test": "6\no-oooo\n"
+	}
+]

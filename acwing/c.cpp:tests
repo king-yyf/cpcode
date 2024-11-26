@@ -1,0 +1,11 @@
+[
+	{
+		"test": "5\nalan Bessie\nbert Alan\nLisA bErt\nmoNIca LISA\njohn mOniCa\n"
+	},
+	{
+		"test": "6\nella Bessie\nlalala BeSsie\n1234 BesSIe\n123 bessie\nCow1 bessiE\n777aAa BESSIE\n"
+	},
+	{
+		"test": "1\nJust1cow BeSSie\n"
+	}
+]

@@ -1,0 +1,230 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+using ll = long long;
+using ar2 = array<int, 2>;
+using ar3 = array<int, 3>;
+using ar4 = array<int, 4>;
+#define all(c) (c).begin(), (c).end()
+#define rall(x) (x).rbegin(), (x).rend() 
+#define sz(x) (int)(x).size()
+#define f0(e) for(int i = 0; i < (e); ++i)
+#define f1(e) for(int i = 1; i <= (e); ++i)
+#define f2(i,e) for(int i = 0; i < (e); ++i)
+#define f3(i,a,b) for (int i=(a);i<(b);i++)
+#define r3(i,b,a) for (int i=(b)-1;i>=(a);i--)
+#define Sm(a) accumulate((a).begin(), (a).end() , 0ll)
+#define Mn(a) (*min_element((a).begin(), (a).end()))
+#define Mx(a) (*max_element((a).begin(), (a).end()))
+#define rev(a) reverse((a).begin(), (a).end())
+#define each(x,a) for(auto& x : a)
+#define mst(a,x) memset(a, x, sizeof(a))
+mt19937 mrand(random_device{}()); 
+int rng(int x) { return mrand() % x;}
+int pct(long long x) {return __builtin_popcountll(x);} 
+int lg(int x) {return x == 0 ? -1 : 31 - __builtin_clz(x);}
+int clg(int x) {return x <= 1 ? 0 : 32 - __builtin_clz(x - 1);}
+template<class t,class u> bool cmx(t &a, const u &b){return a < b ? a = b, 1 : 0;}
+template<class t,class u> bool cmn(t &a, const u &b){return b < a ? a = b, 1 : 0;}
+template <class T> int lb(const vector<T> &v, const T &x) { return distance(begin(v), lower_bound(begin(v), end(v), x));}
+template <class T> int rb(const vector<T> &v, const T &x) { return distance(begin(v), upper_bound(begin(v), end(v), x));}
+template<class T,class A> void psum(vector<T>& s, const vector<A>&a){
+    int n=a.size();s.resize(n+1);s[0]=0;for(int i=0;i<n;++i)s[i+1]=s[i]+a[i];  
+};
+template <typename T, typename U> // pair
+ostream& operator<<(ostream& out, const pair<T, U>& a) {return out << a.first << ' ' << a.second;}
+template <typename T>  // vector
+ostream& operator<<(ostream& out, const vector<T>& a) {for(int i=0,n=a.size(); i<n; ++i) out<<a[i]<<" \n"[i==n-1]; return out;}
+template <typename T, size_t N> // array
+ostream& operator<<(ostream& out, const array<T, N>& a) {for(int i=0;i<N;++i)cout<<a[i]<<" \n"[i==N-1];return out;}
+template <typename T, typename U> // pair
+istream& operator>>(istream& in, pair<T, U>& a) {return in >> a.first >> a.second;}
+template <typename T> // vector
+istream& operator>>(istream& in, vector<T>& a) {for (auto &x: a) in >> x; return in;}
+template <typename T, size_t N> // array
+istream& operator>>(istream& in, array<T, N>& a) {for (int i=0;i<N;++i) in >> a[i]; return in;}
+template<class T> void rd(T& x) {cin >> x;}
+template<class H, class... T> void rd(H& h, T&... t) {rd(h); rd(t...);}
+template<class A> void wt(A x) { cout << x;}
+template<class H, class... T> void wt(const H& h, const T&... t) { wt(h); wt(t...);}
+template<class A> void dbg(A x) { cout<<x<<' ';}
+template<class H, class... T> void dbg(const H& h, const T&... t) { dbg(h); dbg(t...);}
+template<class A> void dbg(vector<vector<A>>& x) {each(c,x)wt(c);}
+struct fast_ios { 
+    fast_ios(){ cin.tie(nullptr), ios::sync_with_stdio(false), cout << fixed << setprecision(10);};
+} fast_ios_;
+
+const char nl = '\n';
+const int N = 2e5 + 5;
+
+int n, m, q;
+int x, y, k;
+string s, t;
+
+void ac_yyf(int tt) {
+    long long x;
+    rd(n,x);
+
+    if(n==1){
+         wt("-1\n");
+        return;
+    }
+
+    if(x<n-1){
+        wt("-1\n");
+        return;
+    }
+
+    long long d=n/2,cnt=n-d;
+    long long mx=d*cnt;
+
+    if(mx<x) {
+        wt("-1\n");
+        return;
+    }
+
+   
+
+    d=1;
+
+    while(d*(n-d)<x)d++;
+
+    long long c=n-d;
+
+    if(d*c==x){
+        f1(d-1){
+            wt(i+1,' ',i,nl);
+        }
+
+        int idx=d+1;
+
+        f0(n-d){
+            wt(idx,' ',d,nl);
+            idx++;
+        }
+        return;
+    }
+
+
+    // d*c>x  -> x/c=d-1
+
+    int md=x%c;
+
+    vector<int> p(c,d-1);
+    f0(c){
+        if(i<md)p[i]++;
+    }
+
+    f1(d-1){
+        wt(i+1,' ',i,nl);
+    }
+
+    int idx=d+1;
+
+    f0(c){
+        wt(idx,' ',d-(d-p[i]),nl);
+        idx++;
+    }
+
+
+    /*
+
+    if(n%2==0){
+
+        // if(tt==2){
+        //     dbg("deg info", n,x,nl);
+        // }
+
+        long long d=n/2,cnt=n-d;
+        long long mx=d*cnt;
+
+        //  if(tt==2){
+        //     dbg("deg info", mx,x,nl);
+        // }
+
+        if(mx<x) {
+            wt("-1\n");
+            return;
+        }
+
+        ll p=mx-x;
+
+        if(d-p<1){
+            wt("-1\n");
+            return;
+        }
+
+        f1(d-1){
+            wt(i+1,' ',i,nl);
+        }
+
+        int idx=d+1;
+
+        f0(n-d-1){
+            wt(idx,' ',d,nl);
+            idx++;
+        }
+
+        wt(n,' ',d-p,nl);
+
+
+    } else {
+
+        bool o=0;
+
+
+        long long cnt;
+
+        for(long long d: {n/2,n/2+1}) {
+            if(o==1)break;
+            cnt=n-d;
+            long long mx=d*cnt;
+
+            // if(tt==3){
+            //     dbg("deg info", d,mx,x,cnt,nl);
+            // }
+
+            if(mx<x) continue;
+            ll p=mx-x;
+            if(d-p<1)continue;
+
+            if(cnt==1&&p!=0){
+                continue;
+            }
+
+            o=1;
+            f1(d-1){
+                wt(i+1,' ',i,nl);
+            }
+            int idx=d+1;
+
+            f0(n-d-1){
+                wt(idx,' ',d,nl);
+                idx++;
+            }
+
+            wt(n,' ',d-p,nl);
+        }
+
+        if(!o){
+            wt("-1\n");
+            return;
+        }
+
+
+    }
+
+    */
+    
+}
+
+int main() {
+    int T = 1;
+    cin >> T;
+    for (int cas = 1; cas <= T; ++cas) {
+        ac_yyf(cas);
+        // cout << ( ac_yyf(cas) ? "Yes" : "No") << '\n';
+        // cout << ( ac_yyf(cas) ? "YES" : "NO") << '\n';
+    }
+    return 0;
+}

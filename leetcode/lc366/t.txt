@@ -1,0 +1,17 @@
+You can do the following operation on the array any number of times:
+Choose any two distinct indices i and j and simultaneously update the values of A[i] to (A[i] AND A[j]) and A[j] to (A[i] OR A[j]). Here, OR denotes the bitwise OR operation, and AND denotes the bitwise AND operation.
+You have to choose k elements from the final array and calculate the sum of their squares.\
+
+
+
+
+You can perform any of the following operations on the string s:
+Choose two indices i and j, and flip both s[i] and s[j]. cost x.
+Choose an index i such that i < n - 1 and flip both s[i] and s[i + 1]. cost is 1.
+find the minimum cost make the strings s and t equal, or print -1 if it is impossible.
+
+
+
+
+Choose any two distinct indices i and j and simultaneously update the values of A[i] to (A[i] AND A[j]) and A[j] to (A[i] OR A[j]). Here, OR denotes the bitwise OR operation, and AND denotes the bitwise AND operation.
+You have to choose k elements from the final array and calculate the sum of their squares.

@@ -1,0 +1,14 @@
+[
+	{
+		"test": "4\n***\n#c#\nc*c\nccc\n"
+	},
+	{
+		"test": "3\n***\n*cc\ncc#\n"
+	},
+	{
+		"test": "10\n***\n#**\nc#*\n*##\nc#c\nc##\n##*\n#**\n#*c\n#c#\n"
+	},
+	{
+		"test": "10\n***\n**c\n#*c\nc*c\n#*c\n#*c\n#*c\n#*c\n#*c\nc**\n"
+	}
+]

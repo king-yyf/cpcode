@@ -1,0 +1,14 @@
+[
+	{
+		"test": "3\naaa 10\nbbb 20\naaa 30\n"
+	},
+	{
+		"test": "5\naaa 9\nbbb 10\nccc 10\nddd 10\nbbb 11\n"
+	},
+	{
+		"test": "5\naaa 9\nbbb 10\nccc 10\nddd 10\nbbb 11\n"
+	},
+	{
+		"test": "10\nbb 3\nba 1\naa 4\nbb 1\nba 5\naa 9\naa 2\nab 6\nbb 5\nab 3\n"
+	}
+]

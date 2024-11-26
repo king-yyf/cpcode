@@ -1,0 +1,11 @@
+[
+	{
+		"test": "5 5\nooooo\noooxx\nxxooo\noxoxo\nxxxxx\n"
+	},
+	{
+		"test": "3 2\nox\nxo\nxx\n"
+	},
+	{
+		"test": "2 4\nxxxx\noxox\n"
+	}
+]

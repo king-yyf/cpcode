@@ -1,0 +1,1 @@
+A binary string is said to be beautiful, if the count of "01" substrings in the string is equal to that of "10" substrings.  given a binary string S. find the count of non-empty beautiful subsequences of the string S. Since the answer can be huge, print it modulo 10^9 + 7

@@ -1,0 +1,14 @@
+[
+	{
+		"test": "2\nb m\nm d\n"
+	},
+	{
+		"test": "2\nb m\nm d\n"
+	},
+	{
+		"test": "3\na b\nb c\nc a\n"
+	},
+	{
+		"test": "5\naaa bbb\nyyy zzz\nccc ddd\nxxx yyy\nbbb ccc\n"
+	}
+]

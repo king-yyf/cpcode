@@ -1,0 +1,10 @@
+. a pair of non-negative integer arrays (B, C) monotonic if:The lengths of both arrays are n.
+B is monotonically non-decreasing, in other words, B[0] <= B[1] <= ... <= B[n - 1].
+C is monotonically non-increasing, in other words, C[0] >= C[1] >= ... >= C[n - 1].
+C[i] + B[i] == A[i] for all 0 <= i <= n - 1.
+Return the count of monotonic pairs, modulo 1e9 + 7
+
+Since the answer may be very large, return it .
+
+
+given array A, count ways to construct array B and C, such that B is non-decreasing array, C is non-increasing array, and C[i] + B[i] == A[i] for all 0 <= i <= n - 1. 

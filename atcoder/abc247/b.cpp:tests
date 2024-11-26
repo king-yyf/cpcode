@@ -1,0 +1,14 @@
+[
+	{
+		"test": "3\ntanaka taro\ntanaka jiro\nsuzuki hanako\n"
+	},
+	{
+		"test": "3\naaa bbb\nxxx aaa\nbbb yyy\n"
+	},
+	{
+		"test": "2\ntanaka taro\ntanaka taro\n"
+	},
+	{
+		"test": "3\ntakahashi chokudai\naoki kensho\nsnu ke\n"
+	}
+]

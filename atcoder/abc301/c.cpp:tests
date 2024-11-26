@@ -1,0 +1,18 @@
+[
+	{
+		"test": "ch@ku@ai\nchoku@@i\n"
+	},
+	{
+		"test": "ch@kud@i\nakidu@ho\n"
+	},
+	{
+		"test": "aoki\n@ok@\n"
+	},
+	{
+		"correct_answers":
+		[
+			"No"
+		],
+		"test": "aa\nbb\n"
+	}
+]

@@ -1,0 +1,14 @@
+[
+	{
+		"test": "4\nBGBG\n4 2 4 3\n"
+	},
+	{
+		"test": "7\nBGBGBGB\n5 1 2 5 1 2 1\n"
+	},
+	{
+		"test": "4\nBBGG\n4 6 1 5\n"
+	},
+	{
+		"test": "7\nBGBGBGB\n5 1 2 5 1 2 1\n"
+	}
+]

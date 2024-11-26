@@ -1,0 +1,9 @@
+Construct String with Minimum Cost, and an integer array costs, both arrays of the same length. the minimum cost to make s equal to target. If it's not possible, return -1.
+
+
+
+
+given a string s, an array of strings w, and an array costs, an empty string s. perform the following operation any number of times: Choose an index i, Append w[i] to s. The cost of operation is costs[i].find the minimum cost to make s equal to target. If it's not possible, return -1.
+
+
+Given a target string t and a set of n strings s1, s2, ..., sn, the goal is to find the minimum cost to build string t using the following operations: Choose any non-empty string from s1, s2, ..., sn. Append chosen string to s

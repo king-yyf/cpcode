@@ -1,0 +1,4 @@
+[
+{"correct_answers": ["1\n4 1"], "test": "abcd\ncdef\n"},
+{"correct_answers": ["1\n2 1"], "test": "Ab\nab\n"}
+]

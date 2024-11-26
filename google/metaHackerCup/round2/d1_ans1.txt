@@ -1,0 +1,10 @@
+Case #1: 1717144145
+Case #2: 36
+Case #3: 9
+Case #4: 30
+Case #5: 141
+Case #6: 54
+Case #7: 267
+Case #8: 62
+Case #9: 205
+Case #10: 262

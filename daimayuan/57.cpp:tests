@@ -1,0 +1,5 @@
+[
+	{
+		"test": "10\ninsert 0 1\ninsert 1 2\nquery 1\nquery 2\ninsert 0 3\nquery 1\ndelete 1\nquery 1\ninsert 1 4 \nquery 2\n"
+	}
+]

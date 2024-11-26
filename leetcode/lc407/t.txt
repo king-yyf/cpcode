@@ -1,0 +1,6 @@
+given two arrays A of length N .each operation, you can choose any subarray of A and increment or decrement each element in subarray by 1.find the minimum number of operations required to make all element in A equal to the zero.
+
+
+
+
+two positive integer arrays A and B, of length N . each operation, you can select any subarray of A and increment or decrement each element within that subarray by 1. find the minimum number of operations required to make A equal to the array B.

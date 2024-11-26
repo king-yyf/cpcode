@@ -1,0 +1,8 @@
+
+
+
+Buy the rightmost available item j for the price of A[i][j] * d. That is, find the greatest index j such that item j was never bought before, and buy it for the price of A[i][j] * d. find the maximum value on buying all m * n products
+
+
+
+A string s is called good if it contains only lowercase English characters and it is possible to rearrange the characters of s such that contains "leet" as a substring. count the  number of good strings of length n.

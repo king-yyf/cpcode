@@ -1,0 +1,8 @@
+[
+	{
+		"test": "2\n6\nabccba\n4\nabdd\n"
+	},
+	{
+		"test": "2\n5\naabab\n3\naaa\n"
+	}
+]

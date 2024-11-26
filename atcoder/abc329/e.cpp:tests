@@ -1,0 +1,11 @@
+[
+	{
+		"test": "7 3\nABCBABC\nABC\n"
+	},
+	{
+		"test": "7 3\nABBCABC\nABC\n"
+	},
+	{
+		"test": "12 2\nXYXXYXXYYYXY\nXY\n"
+	}
+]

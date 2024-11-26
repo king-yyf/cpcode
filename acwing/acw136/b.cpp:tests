@@ -1,0 +1,8 @@
+[
+	{
+		"test": "4\nXOOO\nXXOO\nOOOO\nXXXX\nXOOO\nXOOO\nXOXO\nXOXX\n"
+	},
+	{
+		"test": "2\nXX\nOO\nXO\nOX\n"
+	}
+]

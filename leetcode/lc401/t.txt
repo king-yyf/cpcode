@@ -1,0 +1,9 @@
+given an array A of length N, and x initially is 0, You are allowed to perform the following operation any number of times:
+Choose an unmarked index i from the range [1, N].
+If A[i] is greater than your current  x, then add A[i] to x (i.e., x = x + A[i]), and mark the index i. find the maximum total X you can collect by performing the operations optimally.
+
+
+Given an array A of length N and interger x, initially x is 0, all index are unmarked,You are allowed to perform the following operation any number of times: increment x by A[i] if A[i] > x. then marked index i, Repeat for any unmarked index i in [1, N]. Find the maximum total x achievable.
+
+
+Given an array $A$ of length $N$ and integer $x$ initially with 0, set x to x + A[i] and mark index $i$. Repeat for all unmarked indices. Find the maximum total $x$ achievable.

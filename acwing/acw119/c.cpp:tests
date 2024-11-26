@@ -1,0 +1,11 @@
+[
+	{
+		"test": "3 4\nDDDD\nDBCD\nDDDD\n"
+	},
+	{
+		"test": "3 4\nEEEE\nEBCE\nEEDE\n"
+	},
+	{
+		"test": "7 6\nXXXXXY\nXYYYXY\nXYXXXY\nXYXYYY\nXYXXXY\nXYYYXY\nXXXXXY\n"
+	}
+]

@@ -1,0 +1,9 @@
+
+
+
+Go down to stair i - 1. This operation cannot be used consecutively or on stair 0. Go up to stair i + 2^jump. And then, jump becomes jump + 1. find the total number of ways you can reach stair k.
+
+
+
+
+you are given a non-negative integer k, an integer jump initial value of 0, and x initial value of 1, in one operation you can: 1. x = x - 1, this operation cannot be used consecutively, 2. x = x + 2^jump, and then jump = jump + 1, find the total number of ways you can reach stair k.

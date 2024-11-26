@@ -1,0 +1,9 @@
+Special Permutations For all indexes 0 <= i < n - 1, either a[i] % a[i+1] == 0 or a[i+1] % a[i] == 0.
+Return the total number of special permutations. return it modulo 109 + 7.
+ 
+
+
+Painting the Walls
+
+A paid painter that paints the ith wall in time[i] units of time and takes cost[i] units of money.
+A free painter that paints any wall in 1 unit of time at a cost of 0. But the free painter can only be used if the paid painter is already occupied.

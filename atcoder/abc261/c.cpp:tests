@@ -1,0 +1,8 @@
+[
+	{
+		"test": "5\nnewfile\nnewfile\nnewfolder\nnewfile\nnewfolder\n"
+	},
+	{
+		"test": "11\na\na\na\na\na\na\na\na\na\na\na\n"
+	}
+]

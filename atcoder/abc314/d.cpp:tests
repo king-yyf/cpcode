@@ -1,0 +1,8 @@
+[
+	{
+		"test": "7\nAtCoder\n5\n1 4 i\n3 0 a\n1 5 b\n2 0 a\n1 4 Y\n"
+	},
+	{
+		"test": "35\nTheQuickBrownFoxJumpsOverTheLazyDog\n10\n2 0 a\n1 19 G\n1 13 m\n1 2 E\n1 21 F\n2 0 a\n1 27 b\n3 0 a\n3 0 a\n1 15 i\n"
+	}
+]

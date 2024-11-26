@@ -1,0 +1,15 @@
+[
+	{
+		"test": "6 2\n114514\n"
+	},
+	{
+		"test": "8 2\na1Aa11Aa\n"
+	},
+	{
+		"correct_answers":
+		[
+			"-1"
+		],
+		"test": "11 2\nstoImakforz\n"
+	}
+]

@@ -1,0 +1,36 @@
+
+
+A set of numbers is complete if the product of every pair of its elements is a perfect square.Return the maximum element-sum of a complete subset of the indices set {1, 2, ..., n}.
+
+
+A set of numbers is complete if the product of every pair of its elements is a perfect square Return the maximum element-sum of a complete subset A perfect square is a number that can be expressed as the product of an integer by itself.
+
+
+perfect square
+
+the product of every pair of its elements is a perfect square. maximum element sum of a complete subset 
+
+
+
+
+For the ith machine to create an alloy, it needs composition[i][j] units of metal of type j. Initially, you have stock[i] units of metal type i, and purchasing one unit of metal type i costs cost[i] coins. Given integers n, k, budget, a 1-indexed 2D array composition, and 1-indexed arrays stock and cost, your goal is to maximize the number of alloys the company can create while staying within the budget of budget coins. Return the maximum number of alloys that the company can create.
+
+Maximum Number of Alloys All alloys must be created with the same machine.
+
+
+You are given a 1-indexed array nums of n integers.
+
+A set of numbers is complete if the product of every pair of its elements is a perfect square.
+
+For a subset of the indices set {1, 2, ..., n} represented as {i1, i2, ..., ik}, we define its element-sum as: nums[i1] + nums[i2] + ... + nums[ik].
+
+Return the maximum element-sum of a complete subset of the indices set {1, 2, ..., n}.
+
+A perfect square is a number that can be expressed as the product of an integer by itself.
+
+The ith student will become happy if one of these two conditions is met:
+
+The student is selected and the total number of selected students is strictly greater than nums[i].
+The student is not selected and the total number of selected students is strictly less than nums[i].
+Return the number of ways to select a group of students so that everyone remains happy.
+

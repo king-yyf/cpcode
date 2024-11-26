@@ -1,0 +1,20 @@
+You are given an array A of length N.An array B is considered squarified, if:
+The product of the elements in any even-length subsequence of B is a perfect square, and;
+The product of the elements in any odd-length subsequence of B is not a perfect square.
+Your task is to find the length of the longest subsequence of A which is squarified.
+
+mixleaf 灰度
+git log --pretty=format:"%h - %an, %ar : %s" d3bf5d8a..46e9b9b5 oversea_leaf/mix_leaf | grep -v "auto generate json"
+
+
+{
+	"scenario": "offline_rank_formula",
+	"parameter": {
+		"base": {
+			"":"",
+		}
+	},
+	"formula": {
+		"offline_socre": "fr_evr"
+	}
+}

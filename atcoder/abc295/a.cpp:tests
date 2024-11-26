@@ -1,0 +1,8 @@
+[
+	{
+		"test": "10\nin that case you should print yes and not no\n"
+	},
+	{
+		"test": "10\nin diesem fall sollten sie no und nicht yes ausgeben\n"
+	}
+]

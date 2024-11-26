@@ -1,0 +1,15 @@
+[
+	{
+		"correct_answers":
+		[
+			"0\n-1\n2\n26\n29"
+		],
+		"test": "5\n2\naa\n2\nab\n2\ncc\n3\namo\n4\negzx\n"
+	},
+	{
+		"test": "3\n2\ncc\n2\naf\n4\nbbbb\n"
+	},
+	{
+		"test": "1\n3\nbod\n"
+	}
+]

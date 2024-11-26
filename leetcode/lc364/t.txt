@@ -1,0 +1,1 @@
+For all 0 < j <= i, heights[j - 1] <= heights[j] For all i <= k < n - 1, heights[k + 1] <= heights[k] Return the maximum possible sum of heights of a beautiful configuration of towers.

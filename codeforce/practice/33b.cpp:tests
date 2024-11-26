@@ -1,0 +1,11 @@
+[
+	{
+		"test": "uayd\nuxxd\n3\na x 8\nx y 13\nd c 3\n"
+	},
+	{
+		"test": "a\nb\n3\na b 2\na b 3\nb a 5\n"
+	},
+	{
+		"test": "abc\nab\n6\na b 4\na b 7\nb a 8\nc b 11\nc a 3\na c 0\n"
+	}
+]
